@@ -32,8 +32,6 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -41,5 +39,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Add .nojekyll file
-        run: touch ./dist/.nojekyll
